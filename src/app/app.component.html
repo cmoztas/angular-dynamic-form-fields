@@ -34,5 +34,5 @@
 
   <br>
 
-  {{this.productForm.value | json}}
+  <pre [innerHtml]="this.productForm.value | prettyJson: [false, 3]"></pre>
 </div>

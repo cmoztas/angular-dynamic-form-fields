@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrettyJsonPipe
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, NgbModule
