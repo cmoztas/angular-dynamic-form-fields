@@ -1,0 +1,13 @@
+.btn-primary {
+  background-color: #0d6efd;
+  &:hover {
+    background-color: #0b5ed7;
+  }
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  &:hover {
+    background-color: #bb2d3b;
+  }
+}
