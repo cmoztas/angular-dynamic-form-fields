@@ -8,25 +8,31 @@
     </p>
 
     <table class="table table-bordered" formArrayName="quantities">
-      <tr>
-        <th colspan="2">Add Multiple Quantity</th>
-        <th width="150px">
-          <button type="button" (click)="addQuantity()" class="btn btn-primary">Add More</button>
-        </th>
-      </tr>
-      <tr *ngFor="let quantity of quantities().controls; let i = index" [formGroupName]="i">
-        <td>
-          Quantity:
-          <input type="text" formControlName="qty" class="form-control">
-        </td>
-        <td>
-          Price:
-          <input type="text" formControlName="price" class="form-control">
-        </td>
-        <td>
-          <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>
-        </td>
-      </tr>
+      <thead>
+        <tr>
+          <th colspan="2">Add Multiple Quantity</th>
+          <th>
+              <button type="button" (click)="addQuantity()" class="btn btn-primary">Add More</button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let quantity of quantities().controls; let i = index" [formGroupName]="i">
+          <td>
+            <strong>Quantity:</strong>
+            <input type="text" formControlName="qty" class="form-control">
+          </td>
+          <td>
+          <strong>Price:</strong>
+            <input type="text" formControlName="price" class="form-control">
+          </td>
+          <td>
+            <div class="remove">
+              <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
     </table>
 
     <button type="submit" class="btn btn-success">Submit (Check Console)</button>
@@ -34,5 +40,5 @@
 
   <br>
 
-  <pre [innerHtml]="this.productForm.value | prettyJson: [false, 3]"></pre>
+  <pre [innerHtml]="this.productForm.value | prettyJson: [true, 3]"></pre>
 </div>

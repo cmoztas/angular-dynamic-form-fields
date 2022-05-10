@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
 
 @NgModule({
@@ -12,7 +11,7 @@ import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
     PrettyJsonPipe
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule, NgbModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
