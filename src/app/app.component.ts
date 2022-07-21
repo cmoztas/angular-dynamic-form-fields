@@ -8,6 +8,16 @@ import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   productForm: FormGroup;
+  testJsonData: object = {
+    id: 1,
+    name: "Cagkan Mert",
+    status: true,
+    child: {
+      id: 2,
+      name: "Ece",
+      status: true
+    }
+  }
 
   constructor(
     private formBuilder: FormBuilder
